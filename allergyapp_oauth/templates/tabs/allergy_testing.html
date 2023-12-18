@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<section class="mb-6 table-container">
+    <div class="table">
+        <h2 class="text-xl mb-2"><b>Allergy Testing Table</b></h2>
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">ID</th>
+                    <th class="px-4 py-2">Patient ID</th>
+                    <th class="px-4 py-2">Test Name</th>
+                    <th class="px-4 py-2">Test Result</th>
+                    <th class="px-4 py-2">Test Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for allergy_testing in data1 %}
+                <tr>
+                    <td class="border px-4 py-2">{{allergy_testing.id}}</td>
+                    <td class="border px-4 py-2">{{allergy_testing.patient_id}}</td>
+                    <td class="border px-4 py-2">{{allergy_testing.test_name}}</td>
+                    <td class="border px-4 py-2">{{allergy_testing.test_result}}</td>
+                    <td class="border px-4 py-2">{{allergy_testing.test_date}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

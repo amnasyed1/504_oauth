@@ -1,0 +1,6 @@
+flask
+authlib
+requests
+authlib
+sentry_sdk
+sqlalchemy
